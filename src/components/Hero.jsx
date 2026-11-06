@@ -48,7 +48,7 @@ export default function Hero() {
             <p className="text-base sm:text-lg text-chocolate-700 max-w-xl font-normal leading-relaxed">
               From delicious bites to refreshing beverages, discover something special at{' '}
               <span className="font-semibold text-chocolate-900">Bakes N Bytes</span>. 
-              Savor freshly toasted artisan sandwiches, hot and crunchy street chaats, sizzling Maggi, and savoury snacks prepared fresh daily in Shankarapuram.
+              Savor freshly toasted artisan sandwiches, hot and crunchy street chaats, sizzling Maggi, and savoury snacks prepared fresh daily in Basavanagudi.
             </p>
 
             {/* CTA Buttons */}

@@ -67,7 +67,10 @@ export default function CartDrawer() {
     message += `\nPlease confirm my order. Thank you!`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${BUSINESS_CONFIG.contact.whatsappNumber}?text=${encodedMessage}`;
+    const num = BUSINESS_CONFIG.contact.whatsappNumber;
+    const whatsappUrl = num
+      ? `https://wa.me/${num}?text=${encodedMessage}`
+      : `https://api.whatsapp.com/send?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
@@ -254,7 +257,7 @@ export default function CartDrawer() {
               <div className="flex items-start gap-2 p-2.5 rounded-xl bg-cream-200/70 border border-chocolate-800/10 text-chocolate-700 text-[11px]">
                 <MapPin className="w-3.5 h-3.5 text-terracotta-600 flex-shrink-0 mt-0.5" />
                 <span>
-                  Pickup at Shankarpuram, Basavanagudi (Near Shankar Mutt). Verified direct WhatsApp order.
+                  Order directly for takeaway pickup in Basavanagudi or delivery. Verified WhatsApp order.
                 </span>
               </div>
             </div>

@@ -109,7 +109,7 @@ export default function Footer({ onSelectCategory }) {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-caramel-500 flex-shrink-0 mt-0.5" />
                 <span>
-                  1/1, Chikkanna Gardens, Near Shankar Mutt, Shankarpuram, Basavanagudi, Bengaluru 560004
+                  Basavanagudi, Bengaluru, Karnataka 560004
                 </span>
               </div>
               <div className="flex items-center gap-2">

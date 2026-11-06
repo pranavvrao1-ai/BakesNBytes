@@ -28,3 +28,5 @@ dist-ssr
 # Scraper artifacts
 *.html
 !index.html
+*.json.bak
+bakes_n_bytes_extracted_menu.json

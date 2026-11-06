@@ -13,7 +13,7 @@ export default function GallerySection() {
       src: BUSINESS_CONFIG.images.storefront,
       title: 'Bakes N Bytes Kitchen & Counter',
       category: 'ambiance',
-      desc: 'Our Shankarpuram storefront near Shankar Mutt Road, Basavanagudi',
+      desc: 'Our kitchen counter in Basavanagudi, Bengaluru',
     },
     {
       id: 'g-sand-1',

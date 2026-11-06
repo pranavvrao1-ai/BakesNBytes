@@ -22,20 +22,19 @@ export const BUSINESS_CONFIG = {
 
   // Verified Contact Details
   contact: {
-    phone: "+91 86189 01148",
-    phoneDisplay: "+91 86189 01148",
-    phoneTel: "+918618901148",
-    whatsappNumber: "918618901148", // International format without +
-    whatsappDisplay: "+91 86189 01148",
-    email: "bakesnbytes.blr@gmail.com",
+    phone: "Available via Zomato & WhatsApp",
+    phoneDisplay: "Basavanagudi Kitchen",
+    phoneTel: "",
+    whatsappNumber: typeof import.meta !== 'undefined' && import.meta.env?.VITE_WHATSAPP_NUMBER ? import.meta.env.VITE_WHATSAPP_NUMBER : "",
+    whatsappDisplay: "WhatsApp Order Desk",
+    email: "",
     address: {
-      building: "1/1, Chikkanna Gardens, 3rd Cross",
-      landmark: "Gurukrupa, Near Shankar Mutt Road",
-      locality: "Shankarpuram, Basavanagudi",
+      locality: "Basavanagudi",
       city: "Bengaluru",
       state: "Karnataka",
       pincode: "560004",
-      fullAddress: "1/1, Chikkanna Gardens, 3rd Cross, Gurukrupa, Shankarpuram, Near Shankar Mutt, Basavanagudi, Bengaluru, Karnataka 560004"
+      landmark: "Basavanagudi",
+      fullAddress: "Basavanagudi, Bengaluru, Karnataka 560004"
     },
     coordinates: {
       lat: 12.9561086,
@@ -80,7 +79,7 @@ export const BUSINESS_CONFIG = {
     title: "More Than Just a Bite. It's Bakes N Bytes.",
     subtitle: "A beloved neighbourhood quick-bite destination in the heart of Basavanagudi.",
     paragraphs: [
-      "Located at Shankarpuram near Shankar Mutt Road, Bakes N Bytes was created to bring people together over freshly toasted artisan sandwiches, nostalgic street-style chaats, sizzling Maggi, and comforting snacks.",
+      "Located in Basavanagudi, Bengaluru, Bakes N Bytes was created to bring people together over freshly toasted artisan sandwiches, nostalgic street-style chaats, sizzling Maggi, and comforting snacks.",
       "Every single order is prepared fresh on the griddle using crisp bread, high-grade butter, garden vegetables, and locally ground masalas. Whether you are grabbing a quick cheese grilled sandwich after college, savouring cutlet chaat on a rainy Bengaluru evening, or sharing a plate of steaming momos with friends, we ensure every bite hits the spot.",
       "We operate daily from morning to late evening, offering dine-in, takeaway, quick WhatsApp order dispatch, and online delivery across Bengaluru."
     ],
@@ -95,7 +94,7 @@ export const BUSINESS_CONFIG = {
       },
       {
         title: "Basavanagudi Neighbourhood Vibe",
-        description: "Conveniently located near Shankar Mutt with easy access, quick pickup, and prompt local dispatch."
+        description: "Conveniently located in Basavanagudi with easy access, quick pickup, and prompt local dispatch."
       },
       {
         title: "Transparent & Affordable",
@@ -121,7 +120,7 @@ export const BUSINESS_CONFIG = {
         author: "Bangalore Food Patron",
         rating: 5,
         date: "Recent Customer",
-        text: "The Vegetable Cheese Grilled Sandwich is exceptionally crispy and generous with cheese. Perfect spot for evening snacks in Shankarpuram!",
+        text: "The Vegetable Cheese Grilled Sandwich is exceptionally crispy and generous with cheese. Perfect spot for evening snacks in Basavanagudi!",
         badge: "Verified Zomato Diner"
       },
       {

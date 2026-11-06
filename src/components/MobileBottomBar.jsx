@@ -11,9 +11,13 @@ export default function MobileBottomBar() {
     document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const whatsappDirectUrl = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
-    'Hello Bakes N Bytes! I would like to place an order.'
-  )}`;
+  const whatsappDirectUrl = contact.whatsappNumber
+    ? `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
+        'Hello Bakes N Bytes! I would like to place an order.'
+      )}`
+    : `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        'Hello Bakes N Bytes! I would like to place an order.'
+      )}`;
 
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-cream-50/95 backdrop-blur-lg border-t border-chocolate-800/15 px-3 py-2.5 shadow-elevated">
@@ -28,13 +32,15 @@ export default function MobileBottomBar() {
           <span className="text-[10px] font-bold mt-0.5">Menu</span>
         </button>
 
-        {/* Quick Call Button */}
+        {/* Quick Call / Online Button */}
         <a
-          href={`tel:${contact.phoneTel}`}
+          href={contact.phoneTel ? `tel:${contact.phoneTel}` : BUSINESS_CONFIG.links.zomato}
+          target={contact.phoneTel ? "_self" : "_blank"}
+          rel="noopener noreferrer"
           className="flex-1 flex flex-col items-center justify-center py-1 text-chocolate-800 hover:text-terracotta-600 transition-colors"
         >
           <Phone className="w-5 h-5" />
-          <span className="text-[10px] font-bold mt-0.5">Call</span>
+          <span className="text-[10px] font-bold mt-0.5">{contact.phoneTel ? 'Call' : 'Order'}</span>
         </a>
 
         {/* Quick WhatsApp Inquiry */}

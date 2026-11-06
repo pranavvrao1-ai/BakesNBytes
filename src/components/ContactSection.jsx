@@ -5,9 +5,13 @@ import { BUSINESS_CONFIG } from '../data/restaurantData';
 export default function ContactSection() {
   const { contact, links } = BUSINESS_CONFIG;
 
-  const whatsappDirectUrl = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
-    'Hello Bakes N Bytes! I would like to inquire about your menu and placing an order.'
-  )}`;
+  const whatsappDirectUrl = contact.whatsappNumber
+    ? `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
+        'Hello Bakes N Bytes! I would like to inquire about your menu and placing an order.'
+      )}`
+    : `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        'Hello Bakes N Bytes! I would like to inquire about your menu and placing an order.'
+      )}`;
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-cream-100/70 border-t border-chocolate-800/10">
@@ -22,7 +26,7 @@ export default function ContactSection() {
             Find Us in Basavanagudi
           </h2>
           <p className="mt-3 text-sm sm:text-base text-chocolate-700">
-            Conveniently situated near Shankar Mutt in Shankarpuram. Stop by for hot bites, call ahead for speedy pickup, or order directly via WhatsApp.
+            Conveniently situated in Basavanagudi. Stop by for hot bites, call ahead for speedy pickup, or order directly via WhatsApp.
           </p>
         </div>
 
@@ -99,14 +103,26 @@ export default function ContactSection() {
             {/* 4 Required Action Buttons */}
             <div className="grid grid-cols-2 gap-3 pt-6 mt-6 border-t border-chocolate-800/10">
               
-              {/* 1. Call Now */}
-              <a
-                href={`tel:${contact.phoneTel}`}
-                className="py-3 px-3 rounded-xl bg-chocolate-900 hover:bg-chocolate-800 text-cream-50 font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all"
-              >
-                <Phone className="w-3.5 h-3.5 text-caramel-500" />
-                <span>Call Now</span>
-              </a>
+              {/* 1. Call Now / Order Online */}
+              {contact.phoneTel ? (
+                <a
+                  href={`tel:${contact.phoneTel}`}
+                  className="py-3 px-3 rounded-xl bg-chocolate-900 hover:bg-chocolate-800 text-cream-50 font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all"
+                >
+                  <Phone className="w-3.5 h-3.5 text-caramel-500" />
+                  <span>Call Now</span>
+                </a>
+              ) : (
+                <a
+                  href={links.zomato}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 px-3 rounded-xl bg-chocolate-900 hover:bg-chocolate-800 text-cream-50 font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all"
+                >
+                  <Phone className="w-3.5 h-3.5 text-caramel-500" />
+                  <span>Call via Zomato</span>
+                </a>
+              )}
 
               {/* 2. WhatsApp */}
               <a
@@ -160,7 +176,7 @@ export default function ContactSection() {
             
             <div className="p-4 bg-cream-50 border-t border-chocolate-800/10 flex items-center justify-between text-xs text-chocolate-700">
               <span className="font-semibold">
-                Geo: 12.9561° N, 77.5709° E (Basavanagudi / Shankarpuram)
+                Geo: 12.9561° N, 77.5709° E (Basavanagudi, Bengaluru)
               </span>
               <a
                 href={links.googleMapsDirections}

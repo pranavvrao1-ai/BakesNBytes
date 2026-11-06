@@ -37,10 +37,10 @@ export default function AboutSection() {
                     Neighbourhood Kitchen
                   </span>
                   <h4 className="font-serif font-bold text-lg text-cream-50">
-                    Bakes N Bytes • Shankarapuram
+                    Bakes N Bytes • Basavanagudi
                   </h4>
                   <p className="text-xs text-cream-300 mt-0.5">
-                    1/1, Chikkanna Gardens, Near Shankar Mutt, Basavanagudi
+                    Basavanagudi, Bengaluru, Karnataka
                   </p>
                 </div>
               </div>
