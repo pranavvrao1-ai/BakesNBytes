@@ -27,3 +27,4 @@ dist-ssr
 
 # Scraper artifacts
 *.html
+!index.html
